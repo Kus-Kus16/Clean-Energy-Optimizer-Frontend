@@ -18,7 +18,8 @@ export default function EnergyMixPage() {
         queryFn: async () => {
             const response = await api.get<DayEnergyMix[]>("energy-mix");
             return response.data;
-        }
+        },
+        staleTime: 1000 * 60 * 5
     })
 
     return (

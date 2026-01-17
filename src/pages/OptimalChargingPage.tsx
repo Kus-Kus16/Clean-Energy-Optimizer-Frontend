@@ -24,7 +24,8 @@ export default function OptimalChargingPage() {
             });
             return response.data;
         },
-        enabled: !!chargingHours
+        enabled: !!chargingHours,
+        staleTime: 1000 * 60 * 5
     });
 
     const handleCalculate = (hours: number) => {
